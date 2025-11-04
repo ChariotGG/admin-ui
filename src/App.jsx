@@ -2,123 +2,104 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <div className="p-6 space-y-8">
-        {/* LATIHAN 1 - NAVBAR */}
-        <div>
-          <h2 className="text-xl font-bold mb-2">LATIHAN 1 - Navbar dengan Flexbox</h2>
-          <nav className="p-4 bg-gray-100 flex flex-col md:flex-row md:justify-between items-center">
-            {/* Kiri - Logo */}
-            <div className="font-bold text-lg mb-2 md:mb-0">MyLogo</div>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        {/* Logo */}
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-bold text-teal-600">FINEbank.IO</h1>
+        </div>
 
-            {/* Kanan - Menu */}
-            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-              <li>
-                <a href="#" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <hr />
-        {/* LATIHAN 2 - GRID GALERI */}
-        <div>
-          <h2 className="text-xl font-bold mb-2">LATIHAN 2 - Grid Galeri Gambar</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
-            <img
-              src="https://www.placehold.co/200x200"
-              alt="Gambar Galeri"
-              className="h-48 object-cover"
-            />
+        {/* Form Login */}
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <form>
+            {/* Email Field */}
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="hello@example.com"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Password Field */}
+            <div className="mb-4">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                placeholder="**********"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Keep me signed in */}
+            <div className="flex items-center mb-4">
+              <input
+                type="checkbox"
+                id="remember"
+                className="h-4 w-4 text-teal-600 focus:ring-2 focus:ring-teal-500 border-gray-300 rounded"
+              />
+              <label
+                htmlFor="remember"
+                className="ml-2 block text-sm text-gray-700"
+              >
+                Keep me signed in
+              </label>
+            </div>
+
+            {/* Login Button */}
+            <button
+              type="submit"
+              className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200"
+            >
+              Login
+            </button>
+          </form>
+
+          {/* Divider */}
+          <div className="my-6 flex items-center">
+            <div className="flex-grow border-t border-gray-300"></div>
+            <span className="px-4 text-sm text-gray-500">or sign in with</span>
+            <div className="flex-grow border-t border-gray-300"></div>
           </div>
-        </div>
-        <hr />
-        {/* LATIHAN 3 - PRICING TABLE */}
-        <div>
-          <h2 className="text-xl font-bold mb-2">LATIHAN 3 - Pricing Table</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-            <div className="bg-gray-200 p-6 rounded text-center">
-              Basic
-              <br />
-              Rp 50.000
-            </div>
-            <div className="bg-blue-200 p-8 rounded text-center">
-              Pro
-              <br />
-              Rp 100.000
-            </div>
-            <div className="bg-gray-200 p-6 rounded text-center">
-              Premium
-              <br />
-              Rp 200.000
-            </div>
-          </div>
-        </div>
-        <hr />
-        {/* LATIHAN 4 - DASHBOARD LAYOUT */}
-        <div>
-          <h2 className="text-xl font-bold mb-2">LATIHAN 4 - Layout Dashboard Sederhana</h2>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 min-h-screen">
-            <header className="md:col-span-12 bg-gray-300 p-4">Header</header>
-            <aside className="md:col-span-3 bg-gray-200 p-4">Sidebar</aside>
-            <main className="md:col-span-9 bg-white p-4 border">Content</main>
-            <footer className="md:col-span-12 bg-gray-300 p-4">Footer</footer>
-          </div>
-        </div>
-        <hr />
-        {/* LATIHAN 5 - CARD PRODUCT */}
-        <div>
-          <h2 className="text-xl font-bold mb-2">LATIHAN 5 - Card Product dengan Flexbox</h2>
-          <div className="p-4 border flex flex-col md:flex-row items-center md:items-start gap-4">
+
+          {/* Google Login Button */}
+          <button
+            type="button"
+            className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md transition-colors duration-200"
+          >
             <img
-              src="https://www.placehold.co/80x80"
-              alt="Gambar Produk"
-              className="h-20 w-20 object-cover"
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google Logo"
+              className="w-5 h-5"
             />
-            <div className="text-center md:text-left">
-              <h3 className="font-bold">Nama Produk</h3>
-              <p className="text-sm text-gray-600">Deskripsi produk singkat...</p>
-            </div>
+            Continue with Google
+          </button>
+
+          {/* Create account link */}
+          <div className="mt-4 text-center">
+            <a
+              href="#"
+              className="text-sm text-teal-600 hover:text-teal-800 font-medium"
+            >
+              Create an account
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
