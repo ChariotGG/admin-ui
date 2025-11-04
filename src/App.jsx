@@ -1,78 +1,122 @@
 import "./App.css";
 
 function App() {
-  const courses = [
-    {
-      title: "System Administration and IT Infrastructure Services",
-    },
-    {
-      title: "Operating Systems Becoming a Power User",
-    },
-    {
-      title: "The Bits and Bytes of Computer Networking",
-    },
-    {
-      title: "Technical Support Fundamentals",
-    },
-    {
-      title: "How to Succeed at: Writing Applications",
-    },
-    {
-      title: "Medicine Administration for Carers",
-    },
-  ];
-
   return (
     <>
-      {/* Grid Container */}
-      <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className="shadow rounded-lg overflow-hidden hover:scale-105 hover:border hover:border-gray-400 hover:shadow-lg transition-transform duration-300"
-          >
-            {/* Image */}
+      <div className="p-6 space-y-8">
+        {/* LATIHAN 1 - NAVBAR */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">LATIHAN 1 - Navbar dengan Flexbox</h2>
+          <nav className="p-4 bg-gray-100 flex flex-col md:flex-row md:justify-between items-center">
+            {/* Kiri - Logo */}
+            <div className="font-bold text-lg mb-2 md:mb-0">MyLogo</div>
+
+            {/* Kanan - Menu */}
+            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+              <li>
+                <a href="#" className="hover:underline">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <hr />
+        {/* LATIHAN 2 - GRID GALERI */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">LATIHAN 2 - Grid Galeri Gambar</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
             <img
-              src="https://www.placehold.co/300x200"
-              alt={course.title}
-              className="w-full h-52 object-cover"
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
             />
-
-            {/* Content */}
-            <div className="p-4 bg-red-100 flex flex-col justify-between h-full">
-              <h3 className="text-lg font-semibold mb-4">{course.title}</h3>
-
-              {/* Detail */}
-              <div className="bg-red-50 p-2 rounded-lg mb-4">
-                <div className="flex justify-between text-sm text-gray-500 mt-2">
-                  <span>👥 123 users</span>
-                  <span>⏱ 60 min</span>
-                </div>
-
-                {/* Author */}
-                <div className="mt-3 mb-2 flex items-center gap-2">
-                  <img
-                    src="https://www.placehold.co/50x50"
-                    alt="Author's Avatar"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-medium">Author's Name</p>
-                    <p className="text-xs text-gray-500">Designer</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="mt-4 flex items-center justify-between">
-                <div className="bg-white py-2 px-4 rounded">$123</div>
-                <button className="bg-red-700 hover:bg-red-900 active:bg-red-500 text-white px-4 py-2 rounded text-sm">
-                  Get Started
-                </button>
-              </div>
+            <img
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
+            />
+            <img
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
+            />
+            <img
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
+            />
+            <img
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
+            />
+            <img
+              src="https://www.placehold.co/200x200"
+              alt="Gambar Galeri"
+              className="h-48 object-cover"
+            />
+          </div>
+        </div>
+        <hr />
+        {/* LATIHAN 3 - PRICING TABLE */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">LATIHAN 3 - Pricing Table</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <div className="bg-gray-200 p-6 rounded text-center">
+              Basic
+              <br />
+              Rp 50.000
+            </div>
+            <div className="bg-blue-200 p-8 rounded text-center">
+              Pro
+              <br />
+              Rp 100.000
+            </div>
+            <div className="bg-gray-200 p-6 rounded text-center">
+              Premium
+              <br />
+              Rp 200.000
             </div>
           </div>
-        ))}
+        </div>
+        <hr />
+        {/* LATIHAN 4 - DASHBOARD LAYOUT */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">LATIHAN 4 - Layout Dashboard Sederhana</h2>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 min-h-screen">
+            <header className="md:col-span-12 bg-gray-300 p-4">Header</header>
+            <aside className="md:col-span-3 bg-gray-200 p-4">Sidebar</aside>
+            <main className="md:col-span-9 bg-white p-4 border">Content</main>
+            <footer className="md:col-span-12 bg-gray-300 p-4">Footer</footer>
+          </div>
+        </div>
+        <hr />
+        {/* LATIHAN 5 - CARD PRODUCT */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">LATIHAN 5 - Card Product dengan Flexbox</h2>
+          <div className="p-4 border flex flex-col md:flex-row items-center md:items-start gap-4">
+            <img
+              src="https://www.placehold.co/80x80"
+              alt="Gambar Produk"
+              className="h-20 w-20 object-cover"
+            />
+            <div className="text-center md:text-left">
+              <h3 className="font-bold">Nama Produk</h3>
+              <p className="text-sm text-gray-600">Deskripsi produk singkat...</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
